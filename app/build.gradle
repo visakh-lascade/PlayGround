@@ -18,7 +18,9 @@ android {
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
-
+    configurations.configureEach {
+        resolutionStrategy.force 'com.google.code.findbugs:jsr305:3.0.2'
+    }
     buildTypes {
         release {
             minifyEnabled false
@@ -40,6 +42,13 @@ android {
 dependencies {
     implementation 'io.reactivex.rxjava3:rxandroid:3.0.2'
     implementation 'io.reactivex.rxjava3:rxjava:3.1.5'
+
+    //timber
+    implementation 'com.jakewharton.timber:timber:5.0.1'
+
+    implementation 'org.jcodec:jcodec:0.2.3'
+    implementation 'org.jcodec:jcodec-android:0.2.3'
+    implementation 'org.jcodec:jcodec:0.2.5'
 
     implementation 'io.coil-kt:coil:2.4.0'
     implementation 'androidx.core:core-ktx:1.12.0'
