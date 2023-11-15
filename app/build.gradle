@@ -11,7 +11,7 @@ android {
 
     defaultConfig {
         applicationId "com.test.pseudoid"
-        minSdk 24
+        minSdk 26
         targetSdk 34
         versionCode 1
         versionName "1.0"
@@ -40,8 +40,14 @@ android {
 }
 
 dependencies {
+    implementation 'com.mapbox.maps:android:10.16.1'
+    implementation 'com.mapbox.mapboxsdk:mapbox-sdk-turf:6.9.0'
+
+
+
     implementation 'io.reactivex.rxjava3:rxandroid:3.0.2'
     implementation 'io.reactivex.rxjava3:rxjava:3.1.5'
+    implementation 'androidx.security:security-crypto:1.1.0-alpha06'
 
     //timber
     implementation 'com.jakewharton.timber:timber:5.0.1'
